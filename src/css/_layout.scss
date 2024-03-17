@@ -192,7 +192,9 @@ ul {
     font-size: 1em;
     line-height: 1.8em;
     color: base.$primary-text;
-    max-width: 600px;
+    padding-bottom: 2vh;
+    max-width: 800px;
+    width: 100%;
 }
 
 footer {
@@ -222,6 +224,8 @@ footer p {
     justify-content: center;
     margin: 0 auto 0 auto;
     text-align: center;
+    padding-bottom: 2vh;
+    padding-top: 2vh;
     max-width: 900px;
 }
 
@@ -270,6 +274,7 @@ footer p {
     padding-top: 4vh;
     padding-bottom: 2vh;
     max-width: 550px;
+    width: 100%;
 }
 
 .dot-header {
@@ -333,9 +338,34 @@ div {
 
 // Animering - studsande prick
 #jumpingDot {
-    margin-top: 40vh;
+    margin-top: 25vh;
     @extend .threedot;
     animation: jumpingDot 6s 2s infinite alternate both linear;
+}
+
+.chartFlex {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto 0 auto;
+}
+
+.chartContainer1 {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto 0 auto;
+}
+
+.chartContainer2 {
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto 0 auto;
+}
+
+h2 { 
+    font: 100% base.$font-stack;
+    padding-top: 4vh;
+    padding-bottom: 4vh;
 }
 
 /* Media querys */
@@ -400,7 +430,6 @@ div {
 
 }
 
-
 /* Visar en kolumn för litet läge, mobiltelefon */
 
 @media only screen and (max-width: 800px) {
@@ -430,6 +459,36 @@ div {
         margin-top: 40vh;
         @extend .threedot;
         animation: jumpingDot_mobile 6s 2s infinite alternate both linear;
+    }
+
+    .chartFlex {
+        display: block;
+        width: 100%;
+        padding-left: 10vw;
+        padding-right: 10vw;
+        margin: 0 auto 0 auto;
+    }
+    
+    .chartContainer1 {
+        width: 100%;
+        padding-left: 2vw;
+        padding-right: 2vw;
+        margin: 0 auto 0 auto;
+    }
+    
+    .chartContainer2 {
+        width: 100%;
+        padding-left: 2vw;
+        padding-right: 2vw;
+        margin: 0 auto 0 auto;
+    }
+    
+    h2 { 
+        font: 100% base.$font-stack;
+        padding-left: 2vw;
+        padding-right: 2vw;
+        padding-top: 4vh;
+        padding-bottom: 4vh;
     }
 
 }
